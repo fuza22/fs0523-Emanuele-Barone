@@ -197,7 +197,20 @@ console.log(words);
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+let parola = "Ciao"
+
+function cutString (parola){
+
+let word = ""
+for (let i = 0 ; i < parole.length; i++)
+
+word.push word.substring(1), word.length()( - 1);
+
+}
+
+let finale = cutString;
+
+console.log(finale);
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
