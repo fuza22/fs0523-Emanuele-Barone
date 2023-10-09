@@ -3,22 +3,18 @@
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
 
-/* let n1 = "Ciao";
-let n2 = "Mondo";
-
- function sum(a, b) {
+/*
+ function sum(n1, n2) {
 
   let parola1 = n1.slice(0,2);
   let parola2 = n2.slice(-3);
 
-  let parola3 = (parola1 + parola2).toUpperCase();
-
-  return parola3
+  return (parola1 + parola2).toUpperCase();
 
   
 }
 
-console.log(sum(n1,n2)); /*
+console.log(sum( "ciao", "mondo" ));  */
 
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
@@ -277,6 +273,10 @@ console.log(older(movies)); */
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+
+
+
+
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
