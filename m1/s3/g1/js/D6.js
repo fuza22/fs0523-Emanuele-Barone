@@ -19,12 +19,12 @@ console.log(sum( "ciao", "mondo" ));  */
 /* ESERCIZIO 2 (for)
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
-
-/* function random(){
+/* 
+function random(){
   
   let arr = [];
   for(let i = 0 ; i < 10; i ++){
-  arr.push(Math.floor( Math.random() * 100 ));
+  arr.push(Math.floor( Math.random() * 101 ));
   }
   return arr;
  }
@@ -38,11 +38,23 @@ console.log(random()); */
  /* let array = [1,2,3,4,5,6,7,8,9,10]
 
   let pari = array.filter(function(x){
-    return x % 2 === 0 || x === 0
+    return x % 2 == 0
   })
 
   console.log(pari); */
+
+
+/* VERSIONE DI MICHELE
+
+  function getEven(arr){
+
+    return arr.filter(n => n % 2 === 0);
   
+  }
+  
+  console.log(getEven([4,5,6,7,8,9])); */
+
+
 
 
 /* ESERCIZIO 4 (forEach)
@@ -61,6 +73,21 @@ numeri.forEach(function(numeri) {
 
 console.log(start); */
 
+/* FORMA CORRETTA
+let numeri = [1,2,3,4,5,6,7,8,9]
+
+function somma(myArr) {
+  
+  let start = 0;
+  myArr.forEach(function(x){
+
+   start += x
+
+  }) 
+  return start
+}
+
+console.log(somma(numeri)); */
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
@@ -81,9 +108,21 @@ console.log(somma(numeri)); */
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
 */
 
-/* let numeriRadd = numeri.map(n => n * 2);
+let numeri = [1,2,3,4,5,6,7,8,9]
+function sum(arr, n) {
 
-console.log(numeriRadd); */
+  let newArr = arr.map(valoreAttuale => valoreAttuale + n);
+
+  return newArr
+
+  /* METODO ONE LINE
+
+  return arr.map(valoreAttuale => valoreAttuale + n); */
+
+}
+
+console.log(sum(numeri, 2));
+
 
 /* ESERCIZIO 7 (map)
   Scrivi una funzione che, dato un array di stringhe, ritorni un nuovo array contenente le lunghezze delle rispettive stringhe dell'array di partenza
@@ -274,13 +313,27 @@ console.log(older(movies)); */
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
 
+function getArrayLength(arr) {
 
+return arr.length
+  
+}
 
+console.log(getArrayLength(movies));
 
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+
+
+function getTitles(){
+
+  return movies.map(movie => movie.Title)
+
+}
+
+console.log(getTitles());
 
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
