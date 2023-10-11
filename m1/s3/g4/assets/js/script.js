@@ -4,7 +4,6 @@ let bottoneInvia = document.querySelector("#invia-form");
 bottoneInvia.addEventListener("click", function() {
 
     let target = document.getElementById("lista");
-    let targetDone = document.getElementById("target-done")
     let text = document.getElementById("testo");
     let bottone = document.getElementById("invia-form")
 
@@ -32,14 +31,6 @@ bottoneInvia.addEventListener("click", function() {
 
         lista.remove();
         
-    })
-    
-
-
-    lista.addEventListener("click", function(){
-
-        
-
     })
 
 })
