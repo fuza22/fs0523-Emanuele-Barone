@@ -122,7 +122,7 @@ footer{
     font-size: 1.5rem;
 }
 
-}
+
 
 aside div{
 
@@ -202,7 +202,13 @@ aside div{
 
 }
 
+.cale{
 
+    color: black;
+
+}
+
+}
 @media screen and (min-width: 768px){
     
     body{
