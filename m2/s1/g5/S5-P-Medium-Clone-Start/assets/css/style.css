@@ -25,6 +25,8 @@ img{
 
 }
 
+
+
 /* ------------------------- HEADER -----------------------------*/
 
 #header{
@@ -35,9 +37,21 @@ img{
     position: sticky;
     z-index: 100;
     top: 0;
+    transition: background-color 0.3s linear;
 
 }
 
+#header.alternative-header{
+
+    background-color: white;
+
+}
+
+.alternative-header button{
+
+    background-color:#1A8917;
+
+}
 
 .d-flex{
 
@@ -411,3 +425,128 @@ font-size: 0.9rem;
 
 }
 
+/* ------------------------- POPUP -----------------------------*/
+
+.background-popup{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    background-color: rgba(255, 255, 255, 0.879)
+
+}
+
+.contenuto-popup{
+
+    background-color: white;
+    z-index: 300;
+    position: fixed;
+    top: calc(50% - 347px);
+    left: calc(50% - 339px);
+    width: 678px;
+    height: 695px;
+    height: 100vh;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.253);
+    text-align: center;
+    padding: 120px 15px;
+    
+
+}
+
+.button-x{
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    rotate: 45deg;
+    color: #6B6B6B;
+    cursor: pointer;
+}
+
+.join-medium{
+
+    font-family: 'Spectral', serif;
+    font-size: 1.9rem;
+    margin-bottom: 70px;
+
+}
+
+.buttons{
+
+    flex-direction: column;
+    margin-bottom: 40px;
+
+}
+
+.buttons a{
+
+    border: 1px solid black;
+    border-radius: 40px;
+    height: 42px;
+    width: 300px;
+    line-height: 42px;
+    margin: 0 auto;
+    color: black;
+    position: relative;
+    margin-bottom: 12px;
+    
+
+}
+
+.buttons i{
+
+    position: absolute;
+    left: 15px;
+    padding-top: 13px;
+    
+
+}
+
+.sign-in{
+
+    color: #1A8917;
+    font-weight: bold;
+
+}
+
+.account-esistente{
+
+    margin-bottom: 120px;
+
+
+}
+
+.pop-up-footer{
+
+    color: #6B6B6B;
+    font-size: 0.8rem;
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+    line-height: 20px;
+
+}
+
+.pop-up-footer a{
+
+    text-decoration: underline;
+    color: #6B6B6B;
+}
+
+.hidden{
+
+    display: none;
+
+}
+
+.block-scroll{
+
+    overflow-y: hidden;
+
+}
