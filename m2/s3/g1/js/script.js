@@ -1,4 +1,4 @@
-class user{
+class User{
 
     constructor(_firstName, _lastName, _age, _location){
     
@@ -9,7 +9,7 @@ class user{
     
     }
 
-    ageDifference(user){
+    ageDifference(User){
 
         if(this.age > user.age){
             console.log(`${this.firstName} is older than ${user.firstName}`)
@@ -21,14 +21,14 @@ class user{
     }
 }
 
-let user1 = new user('Emanuele', 'Barone', 27, 'Palermo');
-let user2 = new user('Emilio', 'Plances', 26, 'Palermo');
+let user1 = new User('Emanuele', 'Barone', 27, 'Palermo');
+let user2 = new User('Emilio', 'Plances', 26, 'Palermo');
 
 user1.ageDifference(user2);
 
 /*---------------------------------*/
 
-class pets{
+class Pets{
 
     constructor(_petName, _ownerName, _species, _breed){
 
@@ -52,8 +52,8 @@ class pets{
     }
 }
 
-let pet1 = new pets('Luna', 'Emanuele', 'dog', 'Labrador');
-let pet2 = new pets('Luna', 'Mauro', 'dog', 'Pitbull');
+let pet1 = new Pets('Luna', 'Emanuele', 'dog', 'Labrador');
+let pet2 = new Pets('Luna', 'Mauro', 'dog', 'Pitbull');
 
 pet1.sameOwner(pet2);
 console.log(pet1.sameOwner(pet2));
