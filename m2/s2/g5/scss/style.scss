@@ -1,0 +1,15 @@
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "_navbar.scss";
+
+:root{
+
+    --home-background-color: #141414;
+
+}
+
+
+body{
+
+    background-color: var(--home-background-color);
+
+}
