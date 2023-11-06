@@ -13,10 +13,10 @@ class User{
 
         if(this.age > user.age){
             console.log(`${this.firstName} is older than ${user.firstName}`)
-        }else if(this.age < user.age){
-            console.log(`${user.firstName} is older than ${this.firstName}`)
+        }else if(this.age < User.age){
+            console.log(`${User.firstName} is older than ${this.firstName}`)
         }else{
-            console.log(`${this.firstName} is the same age as ${user.firstName}`)
+            console.log(`${this.firstName} is the same age as ${User.firstName}`)
         }
     }
 }
