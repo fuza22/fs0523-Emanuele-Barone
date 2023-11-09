@@ -19,15 +19,31 @@ class books{
 
     cardCompiler(){
 
+        let card = document.querySelector(".card:last-of-type");
         let img = document.querySelector("img");
         img.src = this.img;
         let title = document.querySelector(".card-title");
         title.textContent = this.title;
         let price = document.querySelector(".card-price");
         price.textContent = this.price + "€";
+        let buttonAdd = document.querySelector(".btn-primary");
+        let buttonDelete = document.querySelector(".btn-danger");
 
     }
+
+    remove(){
+
+        let card = document.querySelector('.card:last-of-type');
+        let buttonDelete = document.querySelector(".btn-danger");
+        buttonDelete.addEventListener("click", () => {
+
+            card.remove();
+
+    })
+    }
 }
+
+
 
 fetch("https://striveschool-api.herokuapp.com/books")
     .then(response => response.json())
