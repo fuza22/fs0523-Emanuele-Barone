@@ -28,9 +28,24 @@ let result = await fetch(`${URL}`,{
 
 //-------------------------- INSERIMENTO DATI ---------------------------------//
 
+
+class Product{
+    constructor(name, description, brand, imageUrl, price){
+
+        this.name = name;
+        this.description = description;
+        this.brand = brand;
+        this.imageUrl = imageUrl;
+        this.price = price;
+    }
+}
+
+
 let buttonAdd = document.querySelector(".buttonAdd");
 
 buttonAdd.addEventListener("click", function(e){
+
+    e.preventDefault();
 
     let name = document.querySelector("#validationCustom01").value;
     let description = document.querySelector("#validationCustom02").value;
@@ -38,8 +53,7 @@ buttonAdd.addEventListener("click", function(e){
     let imageUrl = document.querySelector("#validationCustom04").value;
     let price = document.querySelector("#validationCustom05").value;
 
-
-    let newProduct = new Phone(name, description, brand, imageUrl, price);
+    let newProduct = new Product(name, description, brand, imageUrl, price);
     console.log(newProduct);
     getProducts(newProduct)
 

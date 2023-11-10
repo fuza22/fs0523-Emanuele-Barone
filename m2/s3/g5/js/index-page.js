@@ -17,7 +17,10 @@ loginBtn.addEventListener("click", function(){
 
 //------------------------------CLONE----------------------------------//
 
+let cardContainer = document.querySelector(".card-container");
+
 fetch(`${URL}`,{
+    method:"GET",
     headers:{
         'Content-Type':'application/json',
         "Authorization": APIKEY
@@ -25,7 +28,7 @@ fetch(`${URL}`,{
 })
 .then(res => res.json())
 .then(products => {
-    
+    console.log(products);
     products.forEach((product) => {
 
         new Phone(product._id, product.name, product.description, product.brand, product.imageUrl, product.price)
@@ -45,28 +48,29 @@ class Phone{
         this.imageUrl = imageUrl;
         this.price = price;
         let clone = this.cloneTemplate();
-        this.compileProduct(clone);
+
     }
 
     cloneTemplate() {
-        const template = document.getElementsByTagName("template")[0].content;
-        const clone = template.cloneNode(true);
-        return clone;  
+        let template = document.getElementsByTagName("template")[0];
+        let clone = template.content.cloneNode(true);
+        this.compileProduct(clone);
+        cardContainer.append(clone)
     }
 
     compileProduct(clone) {
     
         let cards = clone.querySelector(".card:last-of-type");
         let images = clone.querySelector(".card-img-top");
-        images.src = product.imageUrl;
+        images.src = this.imageUrl;
         let title = clone.querySelector(".card-title");
-        title.innerHTML = product.name;
+        title.innerHTML = this.name;
         let price = clone.querySelector(".card-price");
-        price.innerHTML = product.price;
+        price.innerHTML = this.price;
         let description = clone.querySelector(".card-description");
-        description.innerHTML = product.description;
+        description.innerHTML = this.description;
         let brand = clone.querySelector(".card-brand");
-        brand.innerHTML = product.brand;
+        brand.innerHTML = this.brand;
     }
 
 }
