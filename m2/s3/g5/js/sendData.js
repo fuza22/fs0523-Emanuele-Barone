@@ -14,28 +14,23 @@ let result = await fetch(`${URL}`,{
                 body: JSON.stringify(newProduct)
             })
 
-}
-
-class Phone{
-
-    constructor(name, description, brand, imageUrl, price){
-
-        this.name = name;
-        this.description = description;
-        this.brand = brand;
-        this.imageUrl = imageUrl;
-        this.price = price;
-    }
+            .then(res => res.json())
+            .then(product => {
+                
+                let form = document.querySelector(".form")
+                form.reset()
+    
+            })
 
 
 }
+
+
+//-------------------------- INSERIMENTO DATI ---------------------------------//
 
 let buttonAdd = document.querySelector(".buttonAdd");
 
 buttonAdd.addEventListener("click", function(e){
-
-    e.preventDefault();
-
 
     let name = document.querySelector("#validationCustom01").value;
     let description = document.querySelector("#validationCustom02").value;
