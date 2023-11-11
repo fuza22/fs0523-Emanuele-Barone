@@ -1,13 +1,11 @@
 const URL = "https://striveschool-api.herokuapp.com/api/product/"
-    const APIKEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMmU4MjI1NGU4ODAwMTgzZjE4MzkiLCJpYXQiOjE2OTk1NTY5OTQsImV4cCI6MTcwMDc2NjU5NH0.czdosu_eNwD-g1E25bBc4b3TbZKM5q7jpW5VPNi9C0c"
+const APIKEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMmU4MjI1NGU4ODAwMTgzZjE4MzkiLCJpYXQiOjE2OTk1NTY5OTQsImV4cCI6MTcwMDc2NjU5NH0.czdosu_eNwD-g1E25bBc4b3TbZKM5q7jpW5VPNi9C0c"
     
 
         const getData = async () => {
 
             try {
                 const ul = document.getElementById("currentEvents")
-                // ogni linea verrà valutata in sequenza dall'alto verso il basso, 
-                // con l'eccezione di quando si incontrerà la keyword "await"
 
                 const resp = await fetch(`${URL}`,{
                     method:"GET",

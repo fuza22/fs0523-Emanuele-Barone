@@ -7,5 +7,15 @@
 
     });
 
+
+    let modifyBtn = document.querySelector(".modify-button");
+
+    modifyBtn.addEventListener("click",function(){
+
+
+        location.href = 'available-products.html'
+
+    });
+
     
     
