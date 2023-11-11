@@ -1,7 +1,7 @@
 function submitForm(email, password) {
 
   if (email == "michele@epicode.com" && password == "pizza") {
-    location.href = "phoneAdd.html";
+    location.href = "profile.html";
   } else {
 
 Swal.fire({
