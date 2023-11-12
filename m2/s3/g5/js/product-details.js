@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("product-name").innerText = product.name;
         document.getElementById("product-image").src = product.imageUrl;
         document.getElementById("product-description").innerText = product.description;
-        document.getElementById("product-price").innerText = `Price: ${product.price} EUR`;
+        document.getElementById("product-price").innerText = `Price: ${product.price} €`;
         document.getElementById("product-brand").innerText = product.brand;
     }
 });
