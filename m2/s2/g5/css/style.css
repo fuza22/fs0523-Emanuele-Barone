@@ -11879,22 +11879,32 @@ svg {
   height: 23px;
 }
 
-.nav-item a {
-  color: grey;
-}
-.nav-item a:hover {
-  color: white;
+.bi-grid-1x2 {
+  scale: 90%;
 }
 
-.nav-item .attivo {
-  color: white;
+.column-icon:hover {
+  background-color: rgba(255, 255, 255, 0.054);
 }
-.nav-item .attivo:hover {
-  color: grey;
+
+.list-icon:hover {
+  background-color: rgba(255, 255, 255, 0.054);
+}
+
+footer {
+  justify-content: center;
+}
+
+.icons {
+  flex-wrap: nowrap;
+}
+
+.second, .third, .fourth {
+  margin-top: 56px;
 }
 
 :root {
-  --home-background-color: #141414;
+  --home-background-color: #232323;
 }
 
 body {

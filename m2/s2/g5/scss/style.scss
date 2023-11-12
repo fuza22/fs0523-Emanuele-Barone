@@ -1,9 +1,13 @@
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 @import "_navbar.scss";
+@import "_filter-section.scss";
+@import "_carousels.scss";
+@import "_footer.scss";
 
 :root{
 
-    --home-background-color: #141414;
+    --home-background-color: #232323;
+
 
 }
 
