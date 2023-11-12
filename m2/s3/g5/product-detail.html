@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Includi i tuoi stili e altri tag di intestazione se necessario -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Phonecode - Mobile store</title>
 </head>
 <body>
+
     <div class="container">
-        <h1>Dettagli del Prodotto</h1>
-        <!-- Aggiungi qui gli elementi HTML per visualizzare i dettagli del prodotto -->
+
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+              <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none"><img id="logo" src="assets/img/Screenshot 2023-11-10 alle 11.02.20.png" alt="phonecode-logo"></a>
+            </div>
+      
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="index.html" class="nav-link px-2">Home</a></li>
+              <li><a href="login-page.html" class="nav-link px-2">Add new product</a></li>
+            </ul>
+      
+            <div class="col-md-3 text-end">
+              <button type="button" class="btn btn-outline-primary me-2 login-button">Login</button>
+            </div>
+          </header>
+
+
+        <h1>Dettagli prodotto</h1>
+        <div class="row card-container"></div> 
+        <template>
+            <div class="col-sm-4 mb-3 mb-sm-0 ">
+            <div class="card data-id mb-4 shadow-sm">
+              <img class="card-img-top img-fluid"/>
+              <div class="card-title"></div>
+              <div class="card-body">
+              <div class="card-price"></div>
+                <p class="card-description"></p>
+                <div class="card-brand"></div>
+                <button type="button" class="btn btn-sm btn-primary details-home-button data-id">Details</button>
+              </div>
+            </div>
+            </div>
+        </template>
+
+
+        <div id="card-container"></div>
+
     </div>
 
+
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-        // Puoi aggiungere script specifici per la pagina di dettaglio qui
-    </script>
 </body>
 </html>

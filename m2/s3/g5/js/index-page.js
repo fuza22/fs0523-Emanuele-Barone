@@ -75,3 +75,15 @@ class Phone{
 
 }
     
+ document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("details-home-button")) {
+            // Ottieni l'ID del prodotto dal pulsante cliccato
+            let productId = event.target.closest(".card").getAttribute("data-id");
+
+            // Costruisci l'URL della pagina dettagli del prodotto
+            let productDetailUrl = `product-detail.html?id=${productId}`;
+
+            // Reindirizza l'utente alla pagina dettagli del prodotto
+            window.location.href = productDetailUrl;
+        }
+    });
