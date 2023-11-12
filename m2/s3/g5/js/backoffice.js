@@ -1,10 +1,7 @@
-const selectedID = new URLSearchParams(window.location.search).get("eventId")
-console.log(selectedID);
 document.addEventListener('DOMContentLoaded', async () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const selectedID = urlParams.get("id");
+    const selectedID = new URLSearchParams(window.location.search).get("eventId")
     const APIKEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMmU4MjI1NGU4ODAwMTgzZjE4MzkiLCJpYXQiOjE2OTk1NTY5OTQsImV4cCI6MTcwMDc2NjU5NH0.czdosu_eNwD-g1E25bBc4b3TbZKM5q7jpW5VPNi9C0c";
-
+console.log(selectedID);
     const subtitle = document.getElementById("subtitle");
     const mainBtn = document.querySelector("button[type='submit']");
     const deleteBtn = document.getElementById("delete-btn");
@@ -38,6 +35,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 
+    mainBtn.addEventListener("click", function(e){
+
+        e.preventDefault();
+        handleSubmit(e);
+
+    });
+
     const handleSubmit = async (event) => {
         event.preventDefault();
 
@@ -49,8 +53,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         };
 
         try {
-            const resp = await fetch(`https://striveschool-api.herokuapp.com/api/product/${selectedID ? `/${selectedID}` : ''}`, {
-                method: selectedID ? "PUT" : "POST",
+            const resp = await fetch(`https://striveschool-api.herokuapp.com/api/product/${selectedID}`, {
+                method:"PUT",
                 body: JSON.stringify(myEvent),
                 headers: {
                     "Content-Type": "application/json",
@@ -71,7 +75,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     document.getElementById("brand").value = "";
                 }
 
-                window.location.assign("./index.html");
+                window.location.assign("./available-products.html");
             } else {
                 console.error("Errore durante la creazione/modifica dell'evento:", resp.status, resp.statusText);
             }
@@ -86,9 +90,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
             if (accepted) {
                 const urlParams = new URLSearchParams(window.location.search);
-                const selectedID = urlParams.get("id");
+                const selectedID = urlParams.get("eventId");
 
-                if (selectedID && selectedID.trim() !== "") {
+                if (selectedID) {
                     const resp = await fetch(`https://striveschool-api.herokuapp.com/api/product/${selectedID}`, {
                         method: "DELETE",
                         headers: {
@@ -100,7 +104,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                     if (resp.ok) {
                         const deletedObj = await resp.json();
                         alert(`Hai eliminato ${deletedObj.name} con id: ${deletedObj._id}`);
-                        window.location.assign("./index.html");
+                        window.location.assign("./available-products.html");
                     } else {
                         console.error("Errore durante l'eliminazione dell'oggetto:", resp.status, resp.statusText);
                         alert("Errore durante l'eliminazione dell'oggetto.");

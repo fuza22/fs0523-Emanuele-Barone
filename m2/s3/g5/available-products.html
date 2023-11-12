@@ -33,7 +33,20 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 mt-4">
                     <h2 class="display-4">Available products</h2>
-                    <ul id="currentEvents" class="list-group"></ul>
+                    <ul id="currentEvents" class="list-group">
+                    </ul>
+                      <template id="li-template">
+
+                        <li class="list-group-item d-flex align-items-center">
+                          <span class="me-auto name"></span> 
+                          <span class="badge bg-dark me-2 price"></span> 
+                          <a href="#" class="details">Details</a>
+                        </li>
+
+                      </template>
+                </ul>
+
+
                 </div>
             </div>
         </div>

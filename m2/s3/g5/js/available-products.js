@@ -30,7 +30,14 @@ const APIKEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMmU4
                 const events = await resp.json()
 
                 events.forEach(event => {
-                    ul.innerHTML += `<li class="list-group-item d-flex align-items-center"><span class="me-auto">${event.name}</span> <span class="badge bg-dark me-2">${event.price}€</span> <a href="./details.html?eventId=${event._id}">Details</a></li>`
+                    let template = document.querySelector("#li-template");
+                    let clone = template.content.cloneNode(true);
+                    clone.querySelector(".name").innerText = event.name;
+                    clone.querySelector(".price").innerText = event.price;
+                    clone.querySelector(".details").href = `./details.html?eventId=${event._id}`;
+                    ul.append(clone);
+
+
                 })
             } catch (error) {
                 console.log(error.message)
