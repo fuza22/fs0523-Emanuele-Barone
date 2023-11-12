@@ -61,6 +61,7 @@ class Phone{
     compileProduct(clone) {
     
         let cards = clone.querySelector(".card:last-of-type");
+        cards.dataset.id = this.id;
         let images = clone.querySelector(".card-img-top");
         images.src = this.imageUrl;
         let title = clone.querySelector(".card-title");
@@ -77,13 +78,8 @@ class Phone{
     
  document.addEventListener("click", function (event) {
         if (event.target.classList.contains("details-home-button")) {
-            // Ottieni l'ID del prodotto dal pulsante cliccato
-            let productId = event.target.closest(".card").getAttribute("data-id");
-
-            // Costruisci l'URL della pagina dettagli del prodotto
+            let productId = event.target.closest(".card").dataset.id;
             let productDetailUrl = `product-detail.html?id=${productId}`;
-
-            // Reindirizza l'utente alla pagina dettagli del prodotto
             window.location.href = productDetailUrl;
         }
     });
