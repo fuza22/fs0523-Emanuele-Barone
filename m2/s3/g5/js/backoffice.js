@@ -7,7 +7,7 @@ console.log(selectedID);
     const deleteBtn = document.getElementById("delete-btn");
 
     if (selectedID) {
-        subtitle.innerText = "— Modifica Evento";
+        subtitle.innerText = "— Modify product";
 
         try {
             const resp = await fetch(`https://striveschool-api.herokuapp.com/api/product/${selectedID}`, {
@@ -19,14 +19,16 @@ console.log(selectedID);
             });
 
             if (resp.ok) {
-                const { name, description, brand, price } = await resp.json();
+                const { name, description, brand, price, imageUrl } = await resp.json();
 
                 document.getElementById("name").value = name;
                 document.getElementById("description").value = description;
                 document.getElementById("price").value = price;
                 document.getElementById("brand").value = brand;
+                document.getElementById("image").value = imageUrl;
+                console.log(imageUrl);
 
-                mainBtn.innerText = "Modifica Evento";
+                mainBtn.innerText = "Modify product";
             } else {
                 console.error("Errore durante il recupero dei dati:", resp.status, resp.statusText);
             }
@@ -50,6 +52,7 @@ console.log(selectedID);
             description: document.getElementById("description").value,
             price: parseFloat(document.getElementById("price").value),
             brand: document.getElementById("brand").value,
+            imageUrl: document.getElementById("image").value
         };
 
         try {
@@ -67,13 +70,7 @@ console.log(selectedID);
 
                 if (selectedID) {
                     alert(`Evento con l'id: ${newEventObj._id} è stato modificato con successo!`);
-                } else {
-                    alert(`Evento creato con successo, l'id è: ${newEventObj._id}`);
-                    document.getElementById("name").value = "";
-                    document.getElementById("description").value = "";
-                    document.getElementById("price").value = "";
-                    document.getElementById("brand").value = "";
-                }
+                } 
 
                 window.location.assign("./available-products.html");
             } else {

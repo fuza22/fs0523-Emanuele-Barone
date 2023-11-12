@@ -21,6 +21,7 @@ let result = await fetch(`${URL}`,{
                 form.reset()
     
             })
+            
 
 
 }
@@ -54,7 +55,6 @@ buttonAdd.addEventListener("click", function(e){
     let price = document.querySelector("#validationCustom05").value;
 
     let newProduct = new Product(name, description, brand, imageUrl, price);
-    console.log(newProduct);
     getProducts(newProduct)
 
 });

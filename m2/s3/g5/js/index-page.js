@@ -67,7 +67,7 @@ class Phone{
         let title = clone.querySelector(".card-title");
         title.innerHTML = this.name;
         let price = clone.querySelector(".card-price");
-        price.innerHTML = this.price;
+        price.innerHTML = this.price + " EUR";
         let description = clone.querySelector(".card-description");
         description.innerHTML = this.description;
         let brand = clone.querySelector(".card-brand");

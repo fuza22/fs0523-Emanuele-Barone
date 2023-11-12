@@ -23,7 +23,7 @@ const APIKEY = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NTRkMmU4
         document.querySelector("#name").innerText = name;
         document.querySelector("#description").innerText = description;
         document.querySelector("#brand").innerText = brand;
-        document.querySelector("#price").innerText = price;
+        document.querySelector("#price").innerText = price + " EUR";
         document.querySelector("#createdAt").innerText = createdAt;
         document.querySelector("#updatedAt").innerText = updatedAt;
 
