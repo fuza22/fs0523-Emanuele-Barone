@@ -54,6 +54,22 @@ buttonAdd.addEventListener("click", function(e){
     let imageUrl = document.querySelector("#validationCustom04").value;
     let price = document.querySelector("#validationCustom05").value;
 
+    if (!name || !description || !brand || !imageUrl || !price) {
+        Swal.fire({
+            title: "Error!",
+            text: "Please fill in all the fields!",
+            icon: "error"
+          });
+    }else{
+
+        Swal.fire({
+            title: "Congrats!",
+            text: "You have successfully added a new product!",
+            icon: "success"
+          });
+
+    }
+
     let newProduct = new Product(name, description, brand, imageUrl, price);
     getProducts(newProduct)
 
