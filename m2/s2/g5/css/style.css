@@ -11900,7 +11900,7 @@ footer {
 }
 
 .second, .third, .fourth {
-  margin-top: 56px;
+  margin-top: 46px;
 }
 
 :root {
@@ -11909,4 +11909,24 @@ footer {
 
 body {
   background-color: var(--home-background-color);
+}
+
+#container-profile {
+  width: 50%;
+  margin: 0 auto;
+}
+
+#genre-button {
+  width: 80px;
+  padding-left: 12px;
+}
+
+.list-icon, .column-icon {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .list-icon, .column-icon {
+    display: block;
+  }
 }/*# sourceMappingURL=style.css.map */
