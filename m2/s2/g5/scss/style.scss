@@ -19,6 +19,7 @@ body{
 }
 
 
+
 #container-profile{
 
 width: 50%;
@@ -39,12 +40,38 @@ margin: 0 auto;
 
 }
 
+#language-btn{
+
+    background-color:black;
+    border: 1px solid white;
+
+}
+
+.btn-grey{
+
+    background-color: black;
+    color: #797979;
+    border: 1px solid #797979;
+    padding: 5px 25px;
+
+}
+
 
 @media screen and (min-width: 992px) {
 
     .list-icon, .column-icon {
 
         display: block;
+    
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+   #right-navbar {
+
+       text-align: center;
     
     }
     

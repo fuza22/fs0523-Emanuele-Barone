@@ -21,12 +21,12 @@
             <h2 class="fs-1">Edit Profile</h2>
             <hr class="border">
             <div class="col-3 mt-3"><img src="Netflix-assets/assets/avatar.png" width="150px" height="150px"></div>
-            <div class="col-8 text-white mx-2 mt-3">
+            <div class="col text-white mx-2 mt-3">
                 <input class="bg-secondary fs-3 mb-3" type="text" value="Emanuele Barone">
                 <p>Language:</p>
                 <div class="dropdown">
-                    <button class="btn btn-secondary bg-black dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    English
+                    <button id="language-btn" class="dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <span class="me-4">English</span>
                     </button>
                     <ul class="dropdown-menu">
                       <li><a class="dropdown-item" href="#">Italian</a></li>
@@ -38,25 +38,25 @@
                   <p class="fs-5 maturity-settings">Maturity settings:</p>
                   <p class="maturity-ratings bg-secondary d-inline-block p-2">ALL MATURITY RATINGS</p>
                   <p>Show titles of all maturity ratings for this profile.</p>
-                  <button class="btn btn-secondary bg-black" type="button" aria-expanded="false">EDIT</button>
+                  <button class="btn-grey" type="button" aria-expanded="false">EDIT</button>
                   <hr class="border">
                   <p class="fs-5">Autoplay controls</p>
                   <div class="form-check">
                     <div class="mt-3 pb-3">
                       <div class="form-check mb-2">
-                         <input class="form-check-input me-2 border-info bg-transparent rounded-0" type="checkbox" name="next" id="next-episode">
+                         <input class="form-check-input me-2 border-grey bg-transparent rounded-0 checkbox-square" type="checkbox" name="next" id="next-episode">
                          <label class="form-check-label"for="next-episode">Autoplay next episode in a series on all devices</label>
                       </div>
                       <div class="form-check align-items-center">
-                         <input class="form-check-input me-2 border-info bg-transparent rounded-0" type="checkbox" name="previews" id="previews">
+                         <input class="form-check-input me-2 border-grey bg-transparent rounded-0 checkbox-square" type="checkbox" name="previews" id="previews">
                          <label class="form-check-label"for="previews">Autoplay previews while browsing on all devices</label>
                       </div>
                    </div>
                     <hr class="border">
-                    <div id="buttons" class="mb-5">
-                        <button class="p-1 px-3 save-button">SAVE</button>
-                        <button class="p-1 px-3 bg-transparent text-decoration-none secondary-button">CANCEL</button>
-                        <button class="p-1 px-3 bg-transparent text-decoration-none secondary-button">DELETE PROFILE</button>
+                    <div class="mb-5">
+                        <button class="p-1 px-3 btn-grey">SAVE</button>
+                        <button class="p-1 px-3 btn-grey text-decoration-none secondary-button">CANCEL</button>
+                        <button class="p-1 px-3 btn-grey text-decoration-none secondary-button">DELETE PROFILE</button>
                     </div>
                   </div>
             </div>    
