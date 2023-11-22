@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Spectral:wght@400;500&display=swap');
+
+body{
+
+    font-family: 'Roboto', sans-serif;
+
+}
+
+a{
+
+    text-decoration: none;
+
+}
+
+main{
+
+    border-bottom: 0.5px solid #6b6b6b3b;    
+
+}
+
+img{
+
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+
+
+/* ------------------------- HEADER -----------------------------*/
+
+#header{
+
+    background-color: #FEC016;
+    padding: 25px 0px 20px;
+    border-bottom: 1px solid black;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    transition: background-color 0.3s linear;
+
+}
+
+#header.alternative-header{
+
+    background-color: white;
+
+}
+
+.alternative-header button{
+
+    background-color:#1A8917;
+
+}
+
+.d-flex{
+
+    display: flex;
+
+}
+
+.container{
+
+justify-content: space-around;
+align-items: center;
+
+}
+
+ul{
+
+list-style: none;
+align-items: center;
+
+
+}
+
+li a{
+
+    color: #242424;
+    padding: 0px 15px;
+    font-size: 0.9rem;
+
+}
+
+.button{
+
+    color: white;
+    background-color: #191919;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 10px 15px;
+    margin-left: 15px;
+
+}
+
+.button:hover{
+
+    background-color: black;
+
+}
+
+/* ------------------------- HERO -----------------------------*/
+
+.hero{
+
+    height: 455px;
+    position: relative;
+    display: flex;
+    background-color: #FEC016;
+    border-bottom: 1px solid black;  
+
+}
+
+.testi-hero{
+
+    width: 71%;
+    margin: 0 auto;
+
+}
+
+h1{
+
+    font-family: 'Spectral', serif;
+    font-size: 7rem;
+    margin-top: 80px;
+    letter-spacing: -8px;
+
+}
+
+.paragraph{
+
+    margin-top: 20px;
+    font-size: 1.5rem;
+    width: 450px;
+    font-weight: lighter;
+    color: #242424;
+
+}
+
+.start-reading{
+
+    padding: 10px 45px;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    margin-left: 0;
+
+}
+
+
+.svg-m{
+
+    position: absolute;
+    right: 0;
+
+}
+
+
+/* ------------------------- TRENDING -----------------------------*/
+
+.trending-section{
+
+    width: 71%;
+    margin: 40px auto;
+ 
+}
+
+.trending-box{
+
+flex-wrap: wrap;
+justify-content: space-between;
+    
+}
+
+.trending-post{
+
+flex-basis: calc(95% / 3);
+margin-bottom: 40px;
+
+}
+
+.trending-title{
+
+    color: #242424;
+    align-items: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+}
+
+.post-number{
+
+    color: #e6e6e69e;
+    font-size: 2rem;
+    margin-right: 20px;
+    font-weight: 700;
+    flex-basis: 10%;
+
+}
+
+.post{
+
+    flex-basis: 90%;
+
+}
+
+.profile-image{
+
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+
+}
+
+.user-name-img{
+
+    align-items: center;
+
+}
+
+.name{
+
+    color: #242424;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    font-weight: 500;
+
+}
+
+.post-title a{
+
+    font-weight: 700;
+    color: #242424;
+
+font-size: 0.9rem;
+
+}
+
+.post-title{
+
+    margin-top: 10px;
+
+}
+
+.public-date{
+
+    color: #6b6b6b;
+    font-size: 0.8rem;
+    margin-top: 12px;
+}
+
+.span-post::before{
+
+    content: "·";
+
+}
+
+.in{
+
+    color: #6B6B6B;
+    font-size: 0.8rem;
+
+}
+
+/* ----------- NEWS ----------- */
+
+.container-news-aside-footer{
+
+    width: 71%;
+    margin: 50px auto;
+    justify-content: space-between;
+}
+
+.news{
+
+    flex-basis: 70%;
+
+}
+
+
+.immagine-post{
+
+    flex-basis: 30%;
+
+}
+
+
+
+.post-contenuto{
+
+    flex-basis: 60%;
+    margin-right: 15px;
+
+}
+
+.date-plus-bookmark{
+
+    justify-content: space-between;
+
+
+}
+
+.date-plus-bookmark span::after{
+
+    content: " · ";
+
+}
+
+.bookmark{
+
+    border: none;
+    margin-right: 10px;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.categorie{
+
+    color: #6B6B6B;
+    background-color: #F2F2F2;
+    border-radius: 40px;
+    padding: 7px;
+
+}
+.post{
+
+    margin-bottom: 35px;
+    align-items:flex-end;
+
+}
+.news-title a{
+
+    font-size: 1.3rem;
+
+}
+
+.news-title{
+
+    margin-bottom: 15px;
+
+}
+
+.sottotitolo{
+
+    color: #6B6B6B;
+    margin-bottom: 5px;
+
+}
+
+.aside-title{
+
+
+    font-weight: 700;
+
+}
+
+.aside-categories-container{
+
+    margin-top: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    
+
+}
+
+.aside-container{
+
+    flex-basis: 50%;
+
+}
+
+.aside-footer{
+
+    position: sticky;
+    top: 110px;
+
+}
+
+.cat-aside{
+
+    padding: 10px 15px;
+    font-size: 0.9rem;
+    margin: 5px;
+
+}
+
+.more-topics{
+
+    display: block;
+    color: #1A8917;
+    font-size: 0.85rem;
+    margin-bottom: 30px;
+    margin-top: 10px;
+
+}
+
+.more-topics:hover{
+
+    color: black;
+
+
+
+}
+
+#aside{
+
+    border-bottom: 0.5px solid #6b6b6b3b;  
+
+}
+
+.campi-footer a{
+
+    color: #6B6B6B;
+    margin-right: 25px;
+    line-height: 30px;
+    font-size: 0.9rem;
+
+}
+
+.campi-footer{
+
+    margin-top: 30px;
+    flex-wrap: wrap;
+
+}
+
+/* ------------------------- POPUP -----------------------------*/
+
+.background-popup{
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 200;
+    background-color: rgba(255, 255, 255, 0.879)
+
+}
+
+.contenuto-popup{
+
+    background-color: white;
+    z-index: 300;
+    position: fixed;
+    top: calc(50% - 347px);
+    left: calc(50% - 339px);
+    width: 678px;
+    height: 695px;
+    height: 100vh;
+    box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.253);
+    text-align: center;
+    padding: 120px 15px;
+    
+
+}
+
+.button-x{
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.8rem;
+    rotate: 45deg;
+    color: #6B6B6B;
+    cursor: pointer;
+}
+
+.join-medium{
+
+    font-family: 'Spectral', serif;
+    font-size: 1.9rem;
+    margin-bottom: 70px;
+
+}
+
+.buttons{
+
+    flex-direction: column;
+    margin-bottom: 40px;
+
+}
+
+.buttons a{
+
+    border: 1px solid black;
+    border-radius: 40px;
+    height: 42px;
+    width: 300px;
+    line-height: 42px;
+    margin: 0 auto;
+    color: black;
+    position: relative;
+    margin-bottom: 12px;
+    
+
+}
+
+.buttons i{
+
+    position: absolute;
+    left: 15px;
+    padding-top: 13px;
+    
+
+}
+
+.sign-in{
+
+    color: #1A8917;
+    font-weight: bold;
+
+}
+
+.account-esistente{
+
+    margin-bottom: 120px;
+
+
+}
+
+.pop-up-footer{
+
+    color: #6B6B6B;
+    font-size: 0.8rem;
+    display: block;
+    width: 450px;
+    margin: 0 auto;
+    line-height: 20px;
+
+}
+
+.pop-up-footer a{
+
+    text-decoration: underline;
+    color: #6B6B6B;
+}
+
+.hidden{
+
+    display: none;
+
+}
+
+.block-scroll{
+
+    overflow-y: hidden;
+
+}
