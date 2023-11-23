@@ -4,26 +4,45 @@ class CapoAbbigliamento {
 
     getSaldoCapo():number {
 
-        return this.saldo;
+        return this.prezzoivainclusa * (this.saldo * 0.01)
     }
 
     getAcquistoCapo():number {
 
-        return this.prezzoivainclusa * (this.saldo * 0.01)
+        return this.prezzoivainclusa - this.getSaldoCapo()
     }
 
 }
 
-async function getCapiAbbigliamento(): Promise<CapoAbbigliamento[]>{
+async function getCapiAbbigliamento(): Promise<any>{
 
     let res:Response = await fetch('./starter/Abbigliamento.json');
     let data:CapoAbbigliamento[] = await res.json()
 
-    data.forEach((capo:CapoAbbigliamento) => console.log(capo));
+    data.forEach((c:CapoAbbigliamento) => {
+        let capo = new CapoAbbigliamento(
 
-    return data;
+        c.id,
+        c.codprod,
+        c.collezione,
+        c.capo,
+        c.modello,
+        c.quantita,
+        c.colore,
+        c.prezzoivaesclusa,
+        c.prezzoivainclusa,
+        c.disponibile,
+        c.saldo,
+        
+        );
 
+        console.log(capo.getSaldoCapo());
+        console.log(capo.getAcquistoCapo());
+        
+        
+    });
 
+    
 }
 
 getCapiAbbigliamento()

@@ -23,18 +23,21 @@ class CapoAbbigliamento {
         this.saldo = saldo;
     }
     getSaldoCapo() {
-        return this.saldo;
+        return this.prezzoivainclusa * (this.saldo * 0.01);
     }
     getAcquistoCapo() {
-        return this.prezzoivainclusa * (this.saldo * 0.01);
+        return this.prezzoivainclusa - this.getSaldoCapo();
     }
 }
 function getCapiAbbigliamento() {
     return __awaiter(this, void 0, void 0, function* () {
         let res = yield fetch('./starter/Abbigliamento.json');
         let data = yield res.json();
-        data.forEach((capo) => console.log(capo));
-        return data;
+        data.forEach((c) => {
+            let capo = new CapoAbbigliamento(c.id, c.codprod, c.collezione, c.capo, c.modello, c.quantita, c.colore, c.prezzoivaesclusa, c.prezzoivainclusa, c.disponibile, c.saldo);
+            console.log(capo.getSaldoCapo());
+            console.log(capo.getAcquistoCapo());
+        });
     });
 }
 getCapiAbbigliamento();
