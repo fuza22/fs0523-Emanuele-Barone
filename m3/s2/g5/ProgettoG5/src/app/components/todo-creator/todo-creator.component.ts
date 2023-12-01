@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { Router } from '@angular/router';
 import { ITodo } from '../../models/i-todo';
@@ -18,20 +18,19 @@ export class TodoCreatorComponent {
     completed:false,
   };
 
-  oldTodo:ITodo|null = null;
+  response:ITodo|null = null;
 
   loading:boolean = false;
 
-  save(){
+  addTodo(){
     this.loading = true;
 
     this.todoSvc.create(this.newTodo).then(res => {
       this.loading = false
-      this.oldTodo = res;
+      this.response = res;
       this.newTodo = {
       completed:false,
-      }
+    }
 })
 }
-
 }
