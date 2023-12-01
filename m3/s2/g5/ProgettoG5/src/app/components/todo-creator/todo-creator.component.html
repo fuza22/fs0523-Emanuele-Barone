@@ -1,0 +1,9 @@
+<form>
+  <input type="text" required placeholder="Title" [(ngModel)]="newTodo.title" name="title" class="form-control">
+  <button (click)="save()">Salva</button>
+</form>
+
+<div *ngIf="loading" >Salvataggio attività in corso</div>
+
+<div *ngIf="oldTodo">Hai creato l'attività correttamente</div>
+
