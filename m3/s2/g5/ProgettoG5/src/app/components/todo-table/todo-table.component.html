@@ -1,5 +1,5 @@
 <div *ngIf="!todo.length">
-  Caricamento in corso
+  Caricamento in corso..
 </div>
 
 <table *ngIf="todo.length">
@@ -7,6 +7,8 @@
     <th>ID</th>
     <th>Nome</th>
     <th>Completata?</th>
+    <th>Azioni
+    </th>
   </tr>
   <tr *ngFor="let t of todo">
     <td>{{t.id}}</td>

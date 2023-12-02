@@ -17,7 +17,7 @@ export class TodoTableComponent {
 
 
   ngOnInit(){
-    this.todoSvc.getAll().then(todo => this.todo = todo)
+    this.todoSvc.getAll().then(todo => this.todo = todo.filter(t => !t.completed))
   }
 
   completed(todo:ITodo){
