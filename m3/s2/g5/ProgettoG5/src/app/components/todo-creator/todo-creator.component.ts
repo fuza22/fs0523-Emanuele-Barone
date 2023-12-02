@@ -22,7 +22,7 @@ export class TodoCreatorComponent {
 
   loading:boolean = false;
 
-  addTodo(){
+  save(){
     this.loading = true;
 
     this.todoSvc.create(this.newTodo).then(res => {

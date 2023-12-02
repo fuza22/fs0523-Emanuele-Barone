@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inclusive+Sans&family=Roboto&display=swap');
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body{
+    height: 100vh;
+    background: rgb(34,195,193);
+    background: linear-gradient(0deg, rgba(34,195,193,1) 0%, rgba(0,82,255,1) 100%);
+    
+    font-family: 'Inclusive Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+
+#contenuto {
+
+    width: 80%;
+    top: 50%;
+    left: 50%;
+    background: whitesmoke;
+    border-radius: 15px;
+    min-width: 450px;
+    position: absolute;
+    min-height: 400px;
+    transform: translate(-50%,-50%);
+    box-shadow: 10px 5px 5px blue;
+}
+
+#titolo {
+
+    font-size: 8rem;
+    color: blue;
+    font-family: 'Dancing Script', cursive;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    
+
+
+}
+
+
+#input-box {
+
+    position: relative;
+    padding: 30px 20px;
+
+}
+
+#testo {
+
+    width: 75%;
+    height: 45px;
+    padding: 12px;
+    color: #111111;
+    font-weight: 500;
+    position: relative;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    border: 2px solid #d1d3d4;
+
+}
+
+#invia-form {
+
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    height: 45px;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+}
+
+
+.lista-elementi {
+
+
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #a200ff21;
+    height: 60px;
+    margin-bottom: 8px;
+    padding: 8px 15px;
+    width: 1050px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: blue;
+    text-align: center;
+    padding-top: 20px;
+    font-weight: bolder;
+}
+
+#task {
+
+    text-align: center;
+    text-decoration: none;
+    margin-left: 60px;
+}
+
+#lista {
+
+    list-style:none;
+    padding-bottom: 20px;
+}
+
+
+.delete-buttons{
+
+    position: relative;
+    float: right;
+    font-weight: 500;
+    font-size: 16px;
+    background-color: #0d75ec;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    outline: none;
+    width: 20%;
+    border-radius: 5px;
+    font-family: 'Poppins',sans-serif;
+
+}
+
+.done {
+
+    text-decoration: line-through;
+
+}
+
+
