@@ -3,4 +3,54 @@
   display: flex;
   justify-content: center;
 
+
+#input-area{
+
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid #AF7EEA;
+  width: 350px;
+  height: 20px;
+  padding: 4px;
+  padding-left: 10px;
+
+&::placeholder{
+
+  color:#AF7EE9;
+  font-size: 0.7rem;
+  font-weight: bold;
+
+}
+
+}
+
+.add-task-btn{
+
+  color: blue;
+  font-size: 1.4rem;
+  transition: .3s linear;
+
+  &:hover{
+
+    color: green;
+
+  }
+
+}
+
+}
+
+#input-area, select, textarea{
+
+  color: blue;
+
+}
+
+.saving, .response{
+
+  margin-top: 10px;
+  text-align: center;
+  color: blue;
+  font-size: .8rem;
+
 }

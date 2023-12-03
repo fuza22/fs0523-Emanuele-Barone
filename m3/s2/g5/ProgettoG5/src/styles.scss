@@ -16,12 +16,24 @@ button{
   svg{
 
     transition: .2s linear;
+    fill: #AF7EEA;
+  }
+
+  .confirm-svg:hover{
+
+    fill: green;
 
   }
 
-  svg:hover{
+  .delete-svg:hover{
 
-    fill: #AF7EEA;
+    fill: red;
+
+  }
+
+  .redo-svg:hover{
+
+    fill: purple;
 
   }
 

@@ -2,17 +2,12 @@
   "todo": [
     {
       "completed": true,
-      "title": "dthhtf",
-      "id": 2
-    },
-    {
-      "completed": true,
       "title": "acscsa",
       "id": 3
     },
     {
       "completed": false,
-      "title": "rggrgr",
+      "title": "prova",
       "id": 4
     }
   ]
