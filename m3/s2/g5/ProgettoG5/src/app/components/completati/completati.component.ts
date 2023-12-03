@@ -26,7 +26,8 @@ export class CompletatiComponent implements OnInit {
   }
 
   completed(todo: ITodo) {
-    this.todoSvc.update(todo).then(() => {
+    this.todoSvc.update(todo)
+    .then(() => {
       const index = this.todo.findIndex(t => todo.id === t.id);
       this.todo.splice(index, 1);
     });
