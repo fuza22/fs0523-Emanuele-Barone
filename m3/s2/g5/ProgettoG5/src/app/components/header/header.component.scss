@@ -2,6 +2,9 @@ ul{
 
   display: flex;
   justify-content: center;
+  background-color: #AF7EEB;
+  border-radius: 50px;
+
 
 }
 
@@ -15,6 +18,14 @@ li{
 li>a{
 
   text-decoration: none;
-  color: black;
+  color: white;
+  font-weight: bold;
+  transition: .2s linear;
+
+  &:hover{
+
+    color: rgb(0, 217, 255);
+
+  }
 
 }
