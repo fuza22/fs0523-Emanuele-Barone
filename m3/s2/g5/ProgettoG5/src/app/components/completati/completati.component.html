@@ -1,8 +1,6 @@
 <h3 class="completed-activities">Attività completate</h3>
 
-<div class="loading-text" *ngIf="loading">
-  Caricamento tasks in corso...
-</div>
+<div class="loading-text" *ngIf="loading">Caricamento tasks in corso...</div>
 
 <div class="not-task" *ngIf="!loading && todo.length === 0">
   <div>
@@ -14,7 +12,7 @@
   <table class="task-list">
     <thead>
       <tr class="title-group">
-        <th class="title">ID</th>
+        <th class="title">#</th>
         <th class="title">Nome</th>
         <th class="title">Azioni</th>
       </tr>

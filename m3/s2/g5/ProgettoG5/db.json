@@ -6,17 +6,12 @@
       "id": 4
     },
     {
-      "completed": true,
+      "completed": false,
       "title": "aaa",
       "id": 5
     },
     {
-      "completed": false,
-      "title": "gfggdgf",
-      "id": 6
-    },
-    {
-      "completed": false,
+      "completed": true,
       "title": "biyniybu",
       "id": 7
     }

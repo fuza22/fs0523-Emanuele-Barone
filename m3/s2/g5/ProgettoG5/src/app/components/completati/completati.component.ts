@@ -18,7 +18,8 @@ export class CompletatiComponent implements OnInit {
   }
 
   fetchTodos() {
-    this.todoSvc.getAll().then(todo => {
+    this.todoSvc.getAll()
+    .then(todo => {
       this.todo = todo.filter(t => t.completed);
       this.loading = false;
     })
