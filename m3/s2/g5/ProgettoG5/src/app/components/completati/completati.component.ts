@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
 import { ITodo } from '../../models/i-todo';
 
@@ -7,32 +7,34 @@ import { ITodo } from '../../models/i-todo';
   templateUrl: './completati.component.html',
   styleUrl: './completati.component.scss'
 })
-export class CompletatiComponent {
+export class CompletatiComponent implements OnInit {
+  todo: ITodo[] = [];
+  loading: boolean = true;
 
-  constructor(private todoSvc:TodoService){}
-  todo:ITodo[] = [];
+  constructor(private todoSvc: TodoService) {}
 
-  ngOnInit(){
-    this.todoSvc.getAll().then(todo => this.todo = todo.filter(t => t.completed))
+  ngOnInit() {
+    this.fetchTodos();
   }
 
-  completed(todo:ITodo){
-
-    this.todoSvc.update(todo)
-    .then(()=>{
-      let i = this.todo.findIndex(t => todo.id == t.id)
-      this.todo.splice(i,1)})
+  fetchTodos() {
+    this.todoSvc.getAll().then(todo => {
+      this.todo = todo.filter(t => t.completed);
+      this.loading = false;
+    })
   }
 
-
-
-  remove(todo:ITodo){
-
-    this.todoSvc.delete(todo.id)
-    .then(()=>{let i=this.todo .findIndex(t => todo.id == t.id)
-    this.todo.splice(i,1)})
-
+  completed(todo: ITodo) {
+    this.todoSvc.update(todo).then(() => {
+      const index = this.todo.findIndex(t => todo.id === t.id);
+      this.todo.splice(index, 1);
+    });
   }
 
-
+  remove(todo: ITodo) {
+    this.todoSvc.delete(todo.id).then(() => {
+      const index = this.todo.findIndex(t => todo.id === t.id);
+      this.todo.splice(index, 1);
+    });
+  }
 }
