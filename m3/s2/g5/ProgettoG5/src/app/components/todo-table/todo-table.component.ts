@@ -25,6 +25,10 @@ export class TodoTableComponent implements OnInit {
       })
   }
 
+  onTodoCreated(createdTodo: ITodo) {
+    this.todo.push(createdTodo);
+  }
+
   completed(todo: ITodo) {
     this.todoSvc.update(todo)
       .then(() => {

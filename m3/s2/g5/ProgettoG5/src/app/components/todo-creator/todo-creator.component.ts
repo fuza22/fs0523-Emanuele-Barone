@@ -1,36 +1,35 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { TodoService } from '../../services/todo.service';
-import { Router } from '@angular/router';
 import { ITodo } from '../../models/i-todo';
 
 @Component({
-  selector: '.app-todo-creator',
+  selector: 'app-todo-creator',
   templateUrl: './todo-creator.component.html',
   styleUrl: './todo-creator.component.scss'
 })
 export class TodoCreatorComponent {
-  constructor(
-    private todoSvc:TodoService,
-    private router:Router
-    ){}
 
-  newTodo:Partial<ITodo> = {
-    completed:false,
+  @Output() todoCreated: EventEmitter<ITodo> = new EventEmitter<ITodo>();
+
+  constructor(private todoSvc: TodoService) {}
+
+  newTodo: Partial<ITodo> = {
+    completed: false,
   };
 
-  response:ITodo|null = null;
+  response: ITodo | null = null;
+  loading: boolean = false;
 
-  loading:boolean = false;
-
-  save(){
+  save() {
     this.loading = true;
 
     this.todoSvc.create(this.newTodo).then(res => {
-      this.loading = false
+      this.loading = false;
       this.response = res;
       this.newTodo = {
-      completed:false,
-    }
-})
-}
+        completed: false,
+      };
+      this.todoCreated.emit(res);
+    });
+  }
 }
