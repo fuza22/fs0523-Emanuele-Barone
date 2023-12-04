@@ -1,14 +1,3 @@
 {
-  "todo": [
-    {
-      "completed": false,
-      "title": "prova",
-      "id": 1
-    },
-    {
-      "completed": true,
-      "title": "prova",
-      "id": 2
-    }
-  ]
+  "todo": []
 }
