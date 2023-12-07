@@ -1,0 +1,62 @@
+.form{
+
+  display: flex;
+  justify-content: center;
+
+
+#input-area{
+
+  background-color: transparent;
+  border-radius: 40px;
+  border: 2px solid #AF7EEA;
+  width: 350px;
+  height: 20px;
+  padding: 4px;
+  padding-left: 10px;
+  transition: .2s linear;
+
+&::placeholder{
+
+  color:#AF7EE9;
+  font-size: 0.7rem;
+  font-weight: bold;
+
+}
+&:hover{
+
+  background-color: rgba(0, 0, 255, 0.062);
+
+}
+
+}
+
+.add-task-btn{
+
+  color: blue;
+  font-size: 1.4rem;
+  transition: .3s linear;
+
+  &:hover{
+
+    color: green;
+
+  }
+
+}
+
+}
+
+#input-area, select, textarea{
+
+  color: blue;
+
+}
+
+.saving, .response{
+
+  margin-top: 10px;
+  text-align: center;
+  color: blue;
+  font-size: .8rem;
+
+}

@@ -1,0 +1,230 @@
+/* IMPOSTAZIONI GENERALI*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap');
+
+/* FONT STYLE*/
+
+body {
+
+    font-family: 'Open Sans', sans-serif;
+    color:#393d41;
+    line-height: 1.65;
+    width: 100%;
+    font-size: 1.2rem;
+
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #25a2c3;
+    
+   
+    
+
+}
+
+
+p{
+
+    padding-bottom: 15px;
+
+}
+
+h1 {
+
+    font-size: 2.5rem;
+    
+}
+
+h2{
+
+    font-size: 2rem;
+    color: white;
+}
+
+.footer,a {
+
+color: white;
+background-color: #25a2c3;
+
+
+}
+
+
+.section {
+
+    text-align: center;
+}
+
+
+.infos {
+
+
+display: block;
+
+}
+
+
+/* GESTIONE HEADER */
+
+#header {
+
+    background-color: black;
+    text-align: center;
+    
+}
+
+.logo-epicode {
+
+    scale: 50%;
+
+}
+
+/* GESTIONE RIQUADRI */
+
+.first-square {
+
+background-image: url(../images/banner.jpg);
+background-position: center;
+background-size:cover;
+padding: 35px 25px;
+
+
+}
+
+.testi-fs{
+
+padding-top: 0px;
+padding-bottom: 25px;
+
+
+
+    
+}
+
+
+#link{
+
+    background-color:#f04c2f ;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 1.0rem;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5%;
+    
+  
+}
+
+
+.img-notebook {
+
+    border-radius: 50%;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    
+}
+
+.red-box {
+
+    background-color: #e22d0e;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.testo-rb {
+
+    padding: 10px;
+    color: white;
+    font-style: italic;
+    
+    }
+
+.epicode-garantisce {
+
+    padding-bottom: 30px;
+
+
+}
+
+.motivi {
+
+
+    padding: 35px 25px;
+}
+
+
+.motivi div img {
+
+width: 100%;
+margin-bottom: 20px;
+
+}
+
+.motivi h3  {
+
+    margin-bottom: 10px;
+}
+
+
+.motivi div    {
+
+border: 1px solid #dee1e3;
+margin: 25px;
+
+
+}                              
+
+.motivi p {
+
+padding-bottom: 30px;
+
+}
+
+.motivi {
+
+    padding-top: 30px;
+
+}
+
+.ceo {
+
+padding: 2px;
+font-size:1.3rem;
+
+
+}
+
+.ceo2{
+
+font-size: 1.0rem;
+
+}
+
+/* GESTIONE FOOTER*/
+
+.contattaci, h2{
+
+padding-bottom: 40px;
+
+}
+
+footer {
+
+
+    padding: 70px 50px;
+    text-align: center;
+    line-height: 2.5rem;
+    
+    }
+
+ .barretta {
+
+     max-width: 160px;
+        
+ }
