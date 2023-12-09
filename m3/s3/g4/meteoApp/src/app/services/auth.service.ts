@@ -29,7 +29,6 @@ export class AuthService {
 
   }
 
-  //ng g environment
   registerUrl:string = environment.apiUrl + '/register';
   loginUrl:string = environment.apiUrl + '/login'
 
@@ -45,8 +44,6 @@ export class AuthService {
 
       this.authSubject.next(data)
       localStorage.setItem('accessData',JSON.stringify(data))
-
-
       this.autoLogout(data.accessToken)
     }))
   }
@@ -77,27 +74,6 @@ export class AuthService {
       //se nessun return viene eseguito proseguo
       this.authSubject.next(accessData)
       this.autoLogout(accessData.accessToken)
-  }
-
-
-  errors(err: any) {
-    switch (err.error) {
-        case "Email and Password are required":
-            return new Error('Email e password obbligatorie');
-            break;
-        case "Email already exists":
-            return new Error('Utente esistente');
-            break;
-        case 'Email format is invalid':
-            return new Error('Email scritta male');
-            break;
-        case 'Cannot find user':
-            return new Error('utente inesistente');
-            break;
-            default:
-        return new Error('Errore');
-            break;
-    }
   }
 
 }

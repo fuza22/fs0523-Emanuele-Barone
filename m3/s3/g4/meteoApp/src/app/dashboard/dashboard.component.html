@@ -1,1 +1,28 @@
-<p>dashboard works!</p>
+<form #weatherForm="ngForm">
+  <input type="text" [(ngModel)]="cityName" name="cityName" placeholder="Inserisci il nome della città" required>
+  <button type="button" (click)="searchCity()" class="btn btn-primary" [disabled]="!weatherForm.valid">Cerca</button>
+  <div *ngIf="weatherForm.invalid && (weatherForm.dirty || weatherForm.touched)" class="error-message">
+    Inserisci una città valida.
+  </div>
+</form>
+
+<div *ngFor="let city of weatherData">
+
+  <button (click)="selectCity(city)">{{city.name}}, {{city.state}}, {{city.country}}</button>
+
+</div>
+
+
+<div *ngIf="selectedCity" class="row card-container">
+  <div class="card col-3" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="city-name">{{ selectedCity.name }}</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Temperatura: {{ weatherDetails?.main?.temp }} °C</li>
+    </ul>
+  </div>
+</div>
+
+
