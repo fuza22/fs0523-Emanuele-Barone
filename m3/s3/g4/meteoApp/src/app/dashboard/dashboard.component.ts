@@ -35,7 +35,7 @@ selectCity(city: any) {
   this.selectedCity = city;
   console.log(city);
 
-  this.weatherService.getWeatherDetails(city.id)
+  this.weatherService.getCityDetails(city.id)
     .pipe(
       tap((data) => {
         this.weatherDetails = data;

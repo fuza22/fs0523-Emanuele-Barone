@@ -1,14 +1,15 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherService {
   private apiUrl = 'http://api.openweathermap.org/geo/1.0/direct';
-  private weatherApiUrl = 'http://api.openweathermap.org/data/2.5/weather'
-  private apiKey = '667d2b0720b8d7b399ca631025670a8c';
+  private weatherApiUrl = 'http://api.openweathermap.org/data/2.5/weather';
+  private apiKey = environment.apiKey;
 
   constructor(private http: HttpClient) {}
 
@@ -24,12 +25,13 @@ export class WeatherService {
     return this.http.get(apiUrlWithParams);
   }
 
-  getWeatherDetails(cityId: number): Observable<any> {
-    const params = new HttpParams()
+  getCityDetails(cityId: number): Observable<any> {
+    let params = new HttpParams()
       .set('id', cityId.toString())
       .set('appid', this.apiKey);
 
-    const apiUrlWithParams = `${this.weatherApiUrl}?${params.toString()}`;
+    let apiUrlWithParams = `${this.weatherApiUrl}?${params.toString()}`;
+
     console.log('Weather API Request:', apiUrlWithParams);
 
     return this.http.get<any>(apiUrlWithParams);
