@@ -1,0 +1,26 @@
+<header class="mb-4">
+  <nav class="navbar navbar-expand">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/auth/login"><img class="logo" src="../../../assets/Screenshot_2023-12-10_alle_12.13.17-removebg-preview.png" alt="epimeteo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <ng-container *ngIf="(isLoggedIn | async) as isLoggedIn; else notLoggedIn">
+            <a class="nav-link" routerLink="/dashboard" *ngIf="isLoggedIn">Dashboard</a>
+            <a class="nav-link" (click)="logout()" *ngIf="isLoggedIn">Logout</a>
+          </ng-container>
+          <ng-template #notLoggedIn>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/auth/login">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/auth/register">Register</a>
+            </li>
+          </ng-template>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

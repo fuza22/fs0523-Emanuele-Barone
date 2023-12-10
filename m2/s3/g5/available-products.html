@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Phonecode - Profile</title>
+</head>
+<body>
+   
+    <div class="container">
+
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="col-md-3 mb-2 mb-md-0">
+              <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none"><img id="logo" src="assets/img/Screenshot 2023-11-10 alle 11.02.20.png" alt="phonecode-logo"></a>
+            </div>
+      
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+              <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
+              <li><a href="index.html" class="nav-link px-2 link-secondary">Profile</a></li>              
+              <li><a href="phoneAdd.html" class="nav-link px-2 link-secondary">Add new product</a></li>
+              <li><a href="available-products.html" class="nav-link px-2 ">Modify an existing product</a></li>
+            </ul>
+      
+            <div class="col-md-3 text-end">
+              <button type="button" class="btn btn-outline-primary me-2">Logged as Administrator</button>
+            </div>
+          </header>
+
+          <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 mt-4">
+                    <h2 class="display-4">Available products</h2>
+                    <ul id="currentEvents" class="list-group">
+                    </ul>
+                      <template id="li-template">
+
+                        <li class="list-group-item d-flex align-items-center">
+                          <span class="me-auto name"></span> 
+                          <span class="badge bg-dark me-2 price"></span> 
+                          <a href="#" class="details">Details</a>
+                        </li>
+
+                      </template>
+                </ul>
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+<script src="js/available-products.js"></script>
+</body>
+</html>
