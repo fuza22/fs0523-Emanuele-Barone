@@ -1,51 +1,58 @@
+import { WeatherService } from './../services/weather.service';
 import { Component } from '@angular/core';
-import { WeatherService } from '../services/weather.service';
 import { catchError, tap } from 'rxjs';
+import { ICityW } from '../pages/auth/Models/i-cityW';
+import { ICity, IWeathObj } from '../pages/auth/Models/i-weath-obj';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss'],
 })
+
 export class DashboardComponent {
-  cityName: string = "";
-  weatherData: any[] = [];
-  selectedCity: any;
-  weatherDetails: any;
+  searchQuery: string = '';
+  cityData: ICityW[] = [];
+  weatherData!: IWeathObj | undefined;
+  cityName: string = '';
+  http: any;
+  authService: any;
+  buttonDisabled: boolean = true;
+  preferitiService: any;
 
-  constructor(private weatherService: WeatherService) {}
+  constructor(private weatherSvc: WeatherService) { }
 
+  findCity() {
 
-searchCity() {
-  this.weatherService.getWeatherByCity(this.cityName)
-    .pipe(
-      tap((data) => {
-        this.weatherData = data;
-        console.log(this.weatherData);
-      }),
-      catchError((error) => {
-        console.error('Errore durante la chiamata API:', error);
-        throw error;
-      })
-    )
-    .subscribe();
-}
+    this.weatherData = undefined
+    this.weatherSvc.getData(this.cityName)
+      .pipe(
+        tap((data: ICityW[]) => {
+          this.cityData = data;
+        }),
+        catchError((error) => {
+          console.error('Errore durante la chiamata API:', error);
+          throw error;
+        })
+      )
+      .subscribe();
+  }
 
-selectCity(city: any) {
-  this.selectedCity = city;
-  console.log(city);
+  getWeather(lat: number, lon: number) {
 
-  this.weatherService.getCityDetails(city.id)
-    .pipe(
-      tap((data) => {
-        this.weatherDetails = data;
-        console.log('Weather Details:', this.weatherDetails);
-      }),
-      catchError((error) => {
-        console.error('Errore durante la chiamata API del meteo:', error);
-        throw error;
-      })
-    )
-    .subscribe();
-}
+    this.cityData = [];
+    this.weatherSvc.getCityWeather(lat, lon)
+      .pipe(
+        tap((data: any) => {
+          this.weatherData = data;
+        })
+      )
+      .subscribe();
+  }
+
+  isEmpty() {
+
+    this.buttonDisabled = this.cityName.trim() === '';
+  }
+
 }

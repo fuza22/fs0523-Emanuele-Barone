@@ -1,4 +1,4 @@
-export interface ICity {
+export interface ICityW {
   name: string
   local_names?: ILocalNames
   lat: number
