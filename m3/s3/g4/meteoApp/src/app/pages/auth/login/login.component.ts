@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { ILogin } from '../Models/i-login';
 
 @Component({
-  selector: 'app-login',
+  selector: '.app-login',
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })

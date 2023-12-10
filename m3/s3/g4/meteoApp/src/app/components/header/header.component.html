@@ -1,8 +1,17 @@
 <header>
-
-  <ul>
-    <li> <a routerLink="/auth/login">Login</a></li>
-    <li> <a routerLink="/auth/register">Register</a></li>
-  </ul>
-
+  <nav class="navbar navbar-expand-lg bg-body-tertiary content">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="/auth/login"><img class="logo" src="../../../assets/Screenshot_2023-12-10_alle_12.13.17-removebg-preview.png" alt="epimeteo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" routerLink="/auth/login">Login</a>
+          <a class="nav-link" routerLink="/auth/register">Registrati</a>
+        </div>
+      </div>
+    </div>
+  </nav>
 </header>
+
+

@@ -2,7 +2,7 @@ import { WeatherService } from './../services/weather.service';
 import { Component } from '@angular/core';
 import { catchError, tap } from 'rxjs';
 import { ICityW } from '../pages/auth/Models/i-cityW';
-import { ICity, IWeathObj } from '../pages/auth/Models/i-weath-obj';
+import { IWeathObj } from '../pages/auth/Models/i-weath-obj';
 
 @Component({
   selector: 'app-dashboard',
