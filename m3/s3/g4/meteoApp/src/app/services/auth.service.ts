@@ -70,8 +70,6 @@ export class AuthService {
 
       const accessData:IAccessData = JSON.parse(userJson);
       if(this.jwtHelper.isTokenExpired(accessData.accessToken)) return;
-
-      //se nessun return viene eseguito proseguo
       this.authSubject.next(accessData)
       this.autoLogout(accessData.accessToken)
   }

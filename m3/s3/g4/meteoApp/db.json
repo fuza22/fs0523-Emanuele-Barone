@@ -11,6 +11,12 @@
       "password": "$2a$10$S0m2c65j2nT3N3f3HWLyg.IGm6BMLk.KzKsuLiK6weEcA5q5OpSIS",
       "name": "Luca",
       "id": 2
+    },
+    {
+      "email": "mario@rossi.it",
+      "password": "$2a$10$8M0n1gBno4pwGL/VVIJcPeQnoGpB3vqIRxXhEzXgEhYggvUfmurnO",
+      "name": "Mario",
+      "id": 3
     }
   ],
   "cities": []
