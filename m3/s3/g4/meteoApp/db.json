@@ -17,6 +17,12 @@
       "password": "$2a$10$8M0n1gBno4pwGL/VVIJcPeQnoGpB3vqIRxXhEzXgEhYggvUfmurnO",
       "name": "Mario",
       "id": 3
+    },
+    {
+      "email": "tullio@email.it",
+      "password": "$2a$10$hcu.eg22vPXNiz7xoAAcOuT1GiVwLNu0P5ZWBhqep.DPo2dBz6l2y",
+      "name": "Tullio",
+      "id": 4
     }
   ],
   "cities": []

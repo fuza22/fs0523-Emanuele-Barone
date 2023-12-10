@@ -7,14 +7,14 @@
 
   <div *ngIf="cityData && cityData.length" class="my-3">
     <div *ngFor="let city of cityData">
-      <button (click)="getWeather(city.lat,city.lon)" class="btn btn-outline-secondary">{{ city.name }},{{ city.country }}</button>
+      <button (click)="getWeather(city.lat,city.lon)" class="btn btn-outline-primary w-100 my-1">{{ city.name }},{{ city.country }}</button>
     </div>
   </div>
 
 
   <div *ngIf="weatherData">
-    <div class="city-info">
-      <div class="card m-2" style="width: 30rem;">
+    <div class="city-info w-100">
+      <div class="card m-2">
         <div class="card-body">
           <h5 class="card-title">{{ weatherData.city.name }}</h5>
         </div>
@@ -33,7 +33,7 @@
 
   <div *ngIf="weatherData" class="weat-card">
       <div *ngFor="let forecast of weatherData.list">
-        <div class="card m-2" style="width: 20rem;">
+        <div class="card m-2 card-weather">
           <img src="..." class="card-img-top">
           <div class="card-body">
             <h6>Previsioni del meteo:</h6>
