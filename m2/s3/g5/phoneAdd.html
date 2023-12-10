@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Phonecode - Add new product</title>
+</head>
+<body>
+
+    <div class="container">
+
+      <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <div class="col-md-3 mb-2 mb-md-0">
+          <a href="index.html" class="d-inline-flex link-body-emphasis text-decoration-none"><img id="logo" src="assets/img/Screenshot 2023-11-10 alle 11.02.20.png" alt="phonecode-logo"></a>
+        </div>
+  
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-2 link-secondary">Home</a></li>
+          <li><a href="profile.html" class="nav-link px-2 link-secondary profile-link">Profile</a></li>      
+          <li><a href="phoneAdd.html" class="nav-link px-2">Add new product</a></li>
+          <li><a href="available-products.html" class="nav-link px-2 link-secondary ">Modify an existing product</a></li>
+        </ul>
+  
+        <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Logged as Administrator</button>
+        </div>
+      </header>
+
+
+        <h1>Add new product</h1>
+        <form class="row g-3 needs-validation form" novalidate>
+            <div class="col-md-4">
+              <label for="validationCustom01" class="form-label">Name</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Insert phone name" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please insert a phone name.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustom02" class="form-label">Description</label>
+              <textarea type="text" class="form-control" id="validationCustom02" placeholder="Add a description" required></textarea>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please insert a valid description.
+              </div>
+            </div>
+            <div class="col-md-4">
+              <label for="validationCustomUsername" class="form-label">Brand</label>
+              <div class="input-group has-validation">
+                <input type="text" class="form-control" id="validationCustom03" placeholder="Insert phone brand" aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Please choose a phone brand.
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom03" class="form-label">Image url</label>
+              <input type="text" class="form-control" id="validationCustom04" placeholder="Insert an image url" required>
+              <div class="invalid-feedback">
+                Please provide a valid image url.
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="validationCustom04" class="form-label">Price</label>
+              <input type="number" class="form-control" id="validationCustom05" placeholder="Insert price" required>
+              <div class="invalid-feedback">
+                Please enter a valid price.
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                <label class="form-check-label" for="invalidCheck">
+                  Are you sure to add a new product?
+                </label>
+                <div class="invalid-feedback">
+                  You must agree before submitting.
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <button class="btn btn-primary buttonAdd" type="submit">Add new product</button>
+            </div>
+          </form>
+
+
+    </div>
+    
+
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/sendData.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,432 @@
+@media screen and (min-width: 576px){
+body { 
+        font-family: Poppins, 'Helvetica Neue', sans-serif;
+        font-size: 1.9rem;
+        line-height: 1.5;
+        padding: 15px;
+        background-image: url('../img/sfondo.png');
+        background-position: center center;
+    }
+
+header{
+
+    font-weight: normal;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+
+  nav li{
+
+    display: inline-block;
+    padding: 5px;
+
+    }
+
+nav ul{
+
+    font-size: 1.3rem;
+    
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: -0.03em;
+    z-index: 100;
+  
+ 
+}
+
+.underline{
+  height: 90px;
+  background-color: white;
+  display: inline-block;
+  background-image: url(/start-1/assets/img/underline.svg);
+  background-repeat: no-repeat;
+  background-size: 430px;
+  background-position-y: 50px;
+  background-blend-mode:hard-light;
+
+  
+
+}
+
+table{
+
+    font-size: 1.3rem;
+}
+
+
+.html-logo{
+
+    padding: 5px;
+    float:left;
+    border: 5px solid #039CC1;
+    outline: 5px solid #9F2C75;
+    height: 90px;
+    width: 90px;
+    margin-right: 30px;
+
+}
+article p{
+
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+}
+
+section h2{
+
+   background-color: rgba(0, 0, 0, 0.266);
+   text-transform: uppercase;
+   font-size: 2.5rem;
+   position: absolute;
+   top: -30px;
+   background-color: #A3A4A4;
+   box-shadow: 1px 1px 3px black;
+}
+
+input{
+
+   width:200px;
+   height: 30px;
+   font-size: 1.1rem;
+}
+button{
+
+height: 25px;
+
+}
+
+section p{
+
+    font-size: 1.1rem;
+
+}
+
+aside h2{
+
+font-size: 2.5rem;
+
+}
+
+aside a{
+
+    font-size: 1.3rem;
+}
+
+footer{
+
+    font-size: 1.5rem;
+}
+
+
+
+aside div{
+
+    position: relative;
+
+}
+
+.container-tag{
+
+    position: absolute;
+    right:10px;
+    top: -3px;
+    font-size: 60px;
+    color: rgba(0, 0, 0, 0.105);
+    
+
+}
+
+.button-up{
+
+    background-color: #edd4d997;
+    border: 2px solid white;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    height: 50px;
+}
+
+.calendar{
+
+    background-color: #edd4d997;
+    border: 2px solid white;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 60px;
+    right: 0;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    height: 50px;
+    
+
+}
+
+.socialz{
+
+    background-color: #edd4d997;
+    border: 2px solid white;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 120px;
+    right: 0;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    height: 50px;
+}
+
+.far{
+
+    color: #D36061;
+    scale: 80%;
+
+}
+
+.fa-plus-square, .fa-calendar-alt{
+
+    color: rgb(76 102 183);
+    scale: 80%;
+
+}
+
+.cale{
+
+    color: black;
+
+}
+
+}
+@media screen and (min-width: 768px){
+    
+    body{
+
+        padding: 60px;
+    }
+
+    header{
+
+        position: sticky;
+        top: 0;
+
+    }
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        letter-spacing: -0.03em;
+        line-height: 1.2;
+        margin-bottom: 0.7em;
+    
+    }
+
+    .underline{
+        height: 90px;
+        background-color: white;
+        display: inline-block;
+        background-image: url(/start-1/assets/img/underline.svg);
+        background-repeat: no-repeat;
+        background-size: 430px;
+        background-position-y: 50px;
+        background-blend-mode:hard-light;
+      
+        
+      
+      }
+      
+
+    table {
+
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 90px;
+    width: 75%;
+    }
+
+    caption {
+        font-weight: bold;
+        font-style: italic;
+        font-size: 1.6rem;
+    }
+
+    button{
+
+        height: 40px;
+    }
+    
+    input{
+
+        height: 35px;
+    }
+
+   aside h2{
+
+    font-size: 3rem;
+    
+    }
+
+
+    .socialz{
+
+        position: fixed;
+        top: 0;
+        right: 0;
+    
+    }
+
+    .calendar{
+
+        position: fixed;
+        top: 70px;
+        right: 0; 
+}
+}
+
+
+@media screen and (min-width: 1200px){
+
+body{
+
+    padding: 60px;
+}
+
+main{
+
+    padding: 25px;
+}
+
+nav{
+
+    margin-right: 15px;
+}
+
+nav ul{
+
+font-size: 1rem;
+margin-right: 15px;
+
+}
+header{
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+    position: sticky;
+    top: 0;
+
+
+
+}
+
+ul li{
+
+    line-height: 1.9;
+}
+
+div{
+
+    display: flex;
+    align-items: flex-end;
+
+}
+
+header div p{
+
+    display: inline;
+
+
+}
+
+div p{
+
+    margin-bottom: 40px;
+
+}
+
+img{
+
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+
+div iframe{
+
+height: 232px;
+width: calc(50% - 0.4rem);
+display: inline-block;
+
+}
+
+section form{
+
+display: inline-block;
+
+}
+
+section{
+    max-width: calc(50% - 0.4rem);
+    border-radius: 3%;
+    height: 250px;
+    margin-top: 20px;
+
+}
+
+input{
+
+    width:300px;
+    height: 40px;
+    font-size: 1.6rem;
+ }
+
+ button{
+ 
+ height: 40px;
+ width: 100px;
+ 
+ }
+
+aside > div{
+
+   display: inline-block;
+   width: calc(100% / 3 - 0.4rem);
+}
+
+}
+
+@media print {
+
+    header, aside, section, footer{
+
+        display:none
+    }
+
+
+    h1{
+
+        font-size: 2rem;
+
+    }
+
+    body{
+
+        font-size: 2.3rem;
+    }
+}
