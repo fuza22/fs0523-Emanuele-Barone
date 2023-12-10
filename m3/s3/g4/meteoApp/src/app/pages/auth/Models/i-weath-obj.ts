@@ -4,6 +4,7 @@ export interface IWeathObj {
   cnt: number
   list: IList[]
   city: ICity
+  imageUrl:string
 }
 
 export interface IList {

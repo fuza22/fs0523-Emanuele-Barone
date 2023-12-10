@@ -55,4 +55,21 @@ export class DashboardComponent {
     this.buttonDisabled = this.cityName.trim() === '';
   }
 
+  getImageUrl(identifier: string): string {
+    let imagePath:string;
+    switch (identifier.toLowerCase()) {
+      case 'clear':
+        return '../../assets/clear.webp';
+      case 'clouds':
+        return '../../assets/cloud.jpeg';
+      case 'rain':
+        return '../../assets/rainy.jpeg';
+      case 'snow':
+        return '../../assets/snowy.jpeg';
+      default:
+        return '../../assets/Screenshot_2023-12-10_alle_12.13.17-removebg-preview.png';
+    };
+  }
+
+
 }

@@ -20,12 +20,12 @@
         </div>
         <ul class="list-group list-group-flush">
           <li class="list-group-item">Paese: {{ weatherData.city.country }}</li>
-          <li class="list-group-item">Temperature: {{ weatherData.list[0].main.temp - 273.15 | number:'1.0-0' }}&#176;C</li>
-          <li class="list-group-item">Description: {{ weatherData.list[0].weather[0].description }}</li>
+          <li class="list-group-item">Temperatura: {{ weatherData.list[0].main.temp - 273.15 | number:'1.0-0' }}&#176;C</li>
+          <li class="list-group-item">Meteo attuale: {{ weatherData.list[0].weather[0].description }}</li>
           <li class="list-group-item">Popolazione: {{ weatherData.city.population }}</li>
         </ul>
         <div>
-          <button class="btn btn-primary m-2">Aggiungi ai preferiti</button>
+          <button class="btn btn-primary w-100 m-2">Aggiungi ai preferiti</button>
         </div>
       </div>
     </div>
@@ -34,13 +34,13 @@
   <div *ngIf="weatherData" class="weat-card">
       <div *ngFor="let forecast of weatherData.list">
         <div class="card m-2 card-weather">
-          <img src="..." class="card-img-top">
+          <img [src]="'assets/' + getImageUrl(forecast.weather[0].main)" class="card-img-top card-img">
           <div class="card-body">
-            <h6>Previsioni del meteo:</h6>
+            <h6 class="ms-3">Previsioni del meteo:</h6>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">Data/Ora: {{ forecast.dt_txt | date: 'dd/MM/yyyy HH:mm' }}</li>
-              <li class="list-group-item">{{ forecast.main.temp - 273.15 | number: '1.0-1' }} &#176;C</li>
-              <li class="list-group-item">Descrizione: {{ forecast.weather[0].main }}</li>
+              <li class="list-group-item">Data e ora: {{ forecast.dt_txt | date: 'dd/MM/yyyy HH:mm' }}</li>
+              <li class="list-group-item">Temperatura prevista: {{ forecast.main.temp - 273.15 | number: '1.0-1' }} &#176;C</li>
+              <li class="list-group-item">Meteo: {{ forecast.weather[0].main }}</li>
             </ul>
           </div>
       </div>
