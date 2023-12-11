@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { catchError, tap } from 'rxjs';
 import { ICityW } from '../pages/auth/Models/i-cityW';
 import { IWeathObj } from '../pages/auth/Models/i-weath-obj';
+import { PreferitiService } from '../services/preferiti.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,9 +19,8 @@ export class DashboardComponent {
   http: any;
   authService: any;
   buttonDisabled: boolean = true;
-  preferitiService: any;
 
-  constructor(private weatherSvc: WeatherService) { }
+  constructor(private weatherSvc: WeatherService, public preferitiSvc:PreferitiService) { }
 
   findCity() {
 
@@ -71,5 +71,26 @@ export class DashboardComponent {
     };
   }
 
+  aggiungiAiPreferiti() {
+    const cittaPreferita = this.weatherData?.city.name;
+    if (cittaPreferita) {
+      this.preferitiSvc.aggiungiAiPreferiti(cittaPreferita);
+    }
+  }
+
+  rimuoviDaPreferiti() {
+    const cittaPreferita = this.weatherData?.city.name;
+    if (cittaPreferita) {
+      this.preferitiSvc.rimuoviDaPreferiti(cittaPreferita);
+    }
+  }
+
+  isCittaPreferita(): boolean {
+    const cittaPreferita = this.weatherData?.city.name;
+    return cittaPreferita ? this.preferitiSvc.getPreferiti().includes(cittaPreferita) : false;
+  }
 
 }
+
+
+

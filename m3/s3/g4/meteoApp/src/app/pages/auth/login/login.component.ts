@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
 import { ILogin } from '../Models/i-login';
+import { catchError, of } from 'rxjs';
 
 @Component({
   selector: '.app-login',
@@ -20,11 +21,21 @@ export class LoginComponent {
     password: ''
   }
 
-  save(){
-    this.authSvc.login(this.loginData)
-    .subscribe(data => {
-        this.router.navigate(['/dashboard'])
-    })
-  }
+  errorMessage:string = '';
 
+  save() {
+    this.authSvc.login(this.loginData)
+        .pipe(
+            catchError((error: any) => {
+              console.error('Errore durante il login:', error);
+              this.errorMessage = 'Credenziali non valide. Riprova.';
+              return of(null);
+            })
+        )
+        .subscribe((data) => {
+            if (data !== null) {
+                this.router.navigate(['/dashboard']);
+            }
+        });
+}
 }

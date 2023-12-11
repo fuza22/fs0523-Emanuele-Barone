@@ -14,6 +14,7 @@
   <div class="form-floating">
     <input type="password" [(ngModel)]="loginData.password" name="password" class="form-control" placeholder="Password">
   </div>
+  <div *ngIf="errorMessage" class="alert alert-danger mt-1 error-msg">{{ errorMessage }}</div>
   <button class="btn btn-primary w-100 py-2 my-3" (click)="save()">Login</button>
   <a class="btn btn-primary w-100 py-2" routerLink="/auth/register">Registrati</a>
 </form>

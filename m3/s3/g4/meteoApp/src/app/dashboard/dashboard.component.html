@@ -1,3 +1,11 @@
+<div class="container favorite-container">
+  <h5 class="fav-title">Città Preferite</h5>
+  <ul class="fav-list">
+    <li *ngFor="let citta of preferitiSvc.getPreferiti()">
+      {{ citta }}
+    </li>
+  </ul>
+</div>
 <div class="container">
   <form class="d-flex">
     <input type="text" [(ngModel)]="cityName" name="cityName" required
@@ -25,7 +33,12 @@
           <li class="list-group-item">Popolazione: {{ weatherData.city.population }}</li>
         </ul>
         <div>
-          <button class="btn btn-primary w-100 m-2">Aggiungi ai preferiti</button>
+          <button *ngIf="!isCittaPreferita()" (click)="aggiungiAiPreferiti()" class="btn btn-primary w-100 m-2">
+            Aggiungi ai preferiti
+          </button>
+          <button *ngIf="isCittaPreferita()" (click)="rimuoviDaPreferiti()" class="btn btn-danger w-100 m-2">
+            Rimuovi dai preferiti
+          </button>
         </div>
       </div>
     </div>
